@@ -1,35 +1,67 @@
-# ISS Specification
+# ISS: как работают команды
 
-Image Shortcuts Standard (ISS) is a semantic shorthand dictionary for AI image generation and editing.
+Этот файл нужен в первую очередь тем, кто подключает Image Shortcuts к своему AI-инструменту.
 
-## Priority
+## Что такое shortcut
 
-1. Explicit user instruction.
-2. User override of a shortcut.
-3. More specific shortcut.
-4. Default shortcut definition.
-5. Model defaults.
+Shortcut - это короткая команда, которая заменяет длинное описание желаемого изображения.
 
-Users are allowed to clarify, extend, temporarily redefine, or replace a shortcut's default behavior.
+Например:
 
-## Unknown shortcuts
+`/fullbody` = показать человека целиком.
 
-If a shortcut is not in the active dictionary, look it up in the configured external dictionary if available. Otherwise ask the user instead of inventing a precise definition.
+`/35mm` = естественный вид фотографии с перспективой 35 мм.
 
-## Parameters
+`/streetstyle` = современная съёмка одежды на улице.
 
-Use `/name:value`, for example `/series:6`, `/aspect:9x16`, or `/camera:35mm`.
+## Если команд несколько
 
-## GitHub dictionary mode
+Объединяйте их:
 
-A compatible AI system may use this repository as the source of truth when explicitly configured to do so.
+`/identity /fullbody /streetstyle /35mm`
 
-Recommended system instruction:
+AI должен учитывать все команды одновременно, если они не противоречат друг другу.
 
-> Treat the Image Shortcuts repository as the shortcut dictionary. Whenever the user writes a token beginning with "/", use the repository definition when needed. Apply the user's explicit instructions and overrides before the default shortcut. If a shortcut is missing, ask the user to define it.
+## Если пользователь что-то уточнил
 
-A GitHub URL mentioned in a normal conversation does not automatically guarantee repository lookup.
+Уточнение пользователя всегда важнее стандартного значения команды.
 
-## Safety
+Например:
 
-ISS does not override the safety, privacy, copyright, or platform rules of the model being used.
+```text
+/paparazzi
+
+Сделай кадр без вспышки и так, чтобы я не смотрел в камеру.
+```
+
+Это уточнение нужно выполнить, даже если стандартная команда подразумевает другой вариант.
+
+## Если команды противоречат друг другу
+
+Используйте более конкретную команду и обычные слова пользователя. Если смысл всё равно неясен, задайте короткий уточняющий вопрос.
+
+## Команды с параметрами
+
+Формат:
+
+`/название:значение`
+
+Примеры:
+
+`/series:6`
+
+`/aspect:9x16`
+
+`/camera:35mm`
+
+## Неизвестная команда
+
+Если команды нет в словаре, не придумывайте её точное значение. Если пользователь не объяснил её смысл, попросите объяснить.
+
+## Постоянная настройка
+
+Для настройки AI без обращения к GitHub используйте **[PROMPT.md](PROMPT.md)**. В нём находятся правила и словарь, которые можно вставить в постоянные инструкции AI-системы.
+
+## Важно
+
+Image Shortcuts не меняет правила безопасности, приватности, авторского права или другие правила платформы, в которой он используется.
