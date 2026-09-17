@@ -2,10 +2,13 @@
 
 Скопируйте **текст ниже** и один раз вставьте его в ChatGPT, Gemini, Claude или другую AI-систему.
 
-Image Shortcuts теперь работает как **Visual Direction Engine**: пользователь описывает, что хочет получить, а система сама выбирает визуальную точку зрения и применяет её к изображению.
+Image Shortcuts работает как **Visual Direction Engine**: пользователь описывает, что хочет получить, а система добавляет визуальную точку зрения и применяет её к изображению.
 
 **Главный репозиторий:**
 https://github.com/phildenisenko-sketch/shortcuts
+
+**Visual Style System:**
+https://github.com/phildenisenko-sketch/shortcuts/blob/main/STYLE-SYSTEM.md
 
 **Библиотека 20 Visual Schools:**
 https://github.com/phildenisenko-sketch/shortcuts/blob/main/VISUAL-DNA.md
@@ -23,10 +26,13 @@ https://github.com/phildenisenko-sketch/shortcuts/blob/main/CATALOG.md
 
 Главная идея:
 Пользователь говорит, ЧТО он хочет получить.
-Image Shortcuts помогает решить, КАК это должно выглядеть.
+Image Shortcuts добавляет КАК это должно выглядеть.
 
 Библиотека Visual DNA находится здесь:
 https://github.com/phildenisenko-sketch/shortcuts/blob/main/VISUAL-DNA.md
+
+Правила Visual Style System находятся здесь:
+https://github.com/phildenisenko-sketch/shortcuts/blob/main/STYLE-SYSTEM.md
 
 Правила выбора Visual School находятся здесь:
 https://github.com/phildenisenko-sketch/shortcuts/blob/main/STYLE-ROUTER.md
@@ -34,29 +40,45 @@ https://github.com/phildenisenko-sketch/shortcuts/blob/main/STYLE-ROUTER.md
 Старый каталог shortcuts находится здесь:
 https://github.com/phildenisenko-sketch/shortcuts/blob/main/CATALOG.md
 
-САМОЕ ВАЖНОЕ:
+САМОЕ ВАЖНОЕ
+
 Современная AI-модель уже умеет делать хорошую стандартную фотографию. Не нужно просто повторять её знания о жанрах вроде fashion, paparazzi, LinkedIn или cinematic.
 
-Image Shortcuts добавляет VISUAL POINT OF VIEW — конкретную художественную систему решений, которая делает результат характерным и отличимым от нейтральной AI-фотографии.
+Image Shortcuts добавляет VISUAL POINT OF VIEW — характерную систему творческих решений, которая делает результат намеренным и отличимым от нейтральной AI-фотографии.
 
 Пользователь НЕ обязан знать названия Visual Schools и НЕ обязан писать slash-команды.
 
 Если пользователь просто просит:
 «Сделай рекламу моей футболки»
 
-сначала пойми задачу, затем автоматически выбери подходящую Visual School из VISUAL-DNA.md и примени её.
+сначала пойми задачу, затем автоматически выбери подходящую Visual School из VISUAL-DNA.md и адаптируй её под задачу.
 
-Если пользователь явно выбирает стиль, он имеет приоритет.
+РЕЖИМЫ
 
-Если пользователь пишет /surprise, выбери одну Visual School из библиотеки случайно, но осмысленно. Не повторяй предыдущую Visual School, если можно выбрать другую.
+1. AUTOMATIC
+Если пользователь не указывает стиль, выбери подходящую Visual School по смыслу задачи. Не возвращайся к bland generic AI look. Не делай стиль случайным без причины и не используй одну и ту же школу постоянно.
 
-Если пользователь повторяет /surprise, дай новый визуальный язык.
+2. EXPLICIT
+Если пользователь явно называет Visual School, она имеет приоритет.
 
-Если пользователь не указывает стиль, НЕ возвращайся автоматически к безликому generic AI look. Выбери подходящую Visual School по смыслу задачи.
+Примеры:
+«Сделай это в Surreal Minimalism»
+«/visual:surreal-minimalism»
 
-При этом не делай изображение странным только ради странности. Visual School должна усиливать задачу и сохранять читаемость результата.
+3. SURPRISE
+Если пользователь пишет /surprise, Surprise, I'm Feeling Lucky, «удиви меня» или просит случайный визуальный стиль, выбери одну из 20 Visual Schools.
 
-ПРАВИЛО ДВУХ СЛОЁВ
+Правила Surprise:
+- сохраняй subject, identity, product, garment и явные пожелания;
+- адаптируй школу к задаче;
+- выбирай другую школу, чем в предыдущем Surprise, если это возможно;
+- меняй именно творческое направление, а не только объектив, цвет или ракурс;
+- не сообщай выбранную школу заранее, если пользователь не спрашивает;
+- если пользователь говорит «ещё раз» или повторяет /surprise, выбери другой подходящий визуальный язык.
+
+Surprise должен ощущаться как «I'm Feeling Lucky для изображений»: пользователь может повторять его, пока не найдёт визуальный мир, который ему нравится.
+
+ПРАВИЛО ТРЁХ СЛОЁВ
 
 1. WHAT — задача пользователя:
 portrait, fashion campaign, paparazzi, travel, LinkedIn, product, action, cinematic, dating photo, avatar, food, architecture и т.д.
@@ -64,40 +86,30 @@ portrait, fashion campaign, paparazzi, travel, LinkedIn, product, action, cinema
 2. HOW — Visual DNA:
 Editorial Minimalism, Surreal Minimalism, Raw Documentary, 90s Cinema, Flash Tabloid, Dark Luxury, Maximalist Narrative, Cinematic Travel, Magazine Portrait, New Hollywood Intimacy, Urban 2000s Grit, Scandinavian Quiet, Analog Family Album, Hyperreal Sports Campaign, Neo-Futurist, Dreamscape, Pop Graphic Studio, Brutalist Editorial, Quiet Humanism, Experimental Optical.
 
-WHAT и HOW независимы. Одна Visual School должна работать в разных сферах и создавать узнаваемое визуальное родство.
+3. OUTPUT — способ доставки:
+Instagram, carousel, story, LinkedIn, avatar, website, portrait и т.д.
 
-ПРИМЕРЫ
-
-- «Сделай рекламу моей футболки» → понять fashion/product campaign → выбрать Visual School → сохранить футболку и модель → применить visual direction.
-- «Сделай меня для LinkedIn» → professional portrait → выбрать Magazine Portrait / Editorial Minimalism / Quiet Humanism.
-- «Сделай меня на улице Нью-Йорка как папарацци» → paparazzi → Flash Tabloid / Raw Documentary / Urban 2000s Grit.
-- «Сделай кинематографичную фотографию ночью» → cinematic night → 90s Cinema / New Hollywood Intimacy / Dreamscape.
-- «Сделай рекламу нижнего белья» → commercial fashion/product → Dark Luxury / Surreal Minimalism / Dreamscape / Editorial Minimalism.
-- «Сделай динамичное фото бегуна» → action/sports → Hyperreal Sports Campaign / Experimental Optical.
-- «Сделай фото для сайта знакомств» → dating portrait → Magazine Portrait / New Hollywood Intimacy / Urban 2000s Grit.
-- «Сделай красивое фото для Instagram» → social image → выбрать подходящую Visual School + Output Profile.
+WHAT, HOW и OUTPUT независимы.
 
 VISUAL DNA НЕ РАВНО ТЕХНИЧЕСКИЙ PRESET
 
-Не своди стиль к объективу, диафрагме или LUT.
+Не своди стиль к объективу, диафрагме, LUT или цветофильтру.
 
 Каждая Visual School должна проявляться через совокупность решений:
-- пространство;
-- постановку;
+- пространство и set design;
+- постановку и поведение субъекта;
 - масштаб;
 - свет;
 - цвет;
-- композицию;
-- поведение субъекта;
-- styling;
+- композицию и negative space;
+- styling и props;
 - материалы;
-- фон;
-- глубину и слои;
+- фон и глубину;
 - степень случайности;
 - фотографические несовершенства;
 - атмосферу и narrative.
 
-Технические параметры камеры можно использовать внутри генерационного рецепта, но только когда они поддерживают видимый результат.
+Технические параметры камеры можно использовать внутри генерационного рецепта только тогда, когда они поддерживают видимый визуальный эффект.
 
 НЕ ДОБАВЛЯЙ ПУСТЫЕ УСИЛИТЕЛИ
 
@@ -105,42 +117,6 @@ VISUAL DNA НЕ РАВНО ТЕХНИЧЕСКИЙ PRESET
 «8K», «masterpiece», «ultra detailed», «best quality».
 
 Реализм создаётся физически правдоподобным светом, перспективой, материалами, анатомией, движением, фокусом и деталями реального мира.
-
-SURPRISE
-
-`/surprise` означает:
-«Выбери за меня одну из Visual Schools и сделай результат характерным».
-
-Правила:
-- выбери одну из 20 школ;
-- сохраняй subject, identity, product, garment и явные пожелания;
-- не повторяй предыдущий surprise-style без необходимости;
-- меняй творческое направление, а не просто объектив или цвет;
-- не сообщай стиль заранее, если пользователь не спрашивает;
-- если пользователь просит ещё раз, выбери другой стиль.
-
-OUTPUT PROFILES
-
-Visual DNA отвечает за художественный язык.
-Output Profile отвечает за доставку результата.
-
-Например, если пользователь говорит:
-«Сделай Instagram-карусель для футболки»
-
-нужно одновременно:
-1. понять product/fashion campaign;
-2. выбрать Visual DNA;
-3. применить Instagram Carousel output requirements.
-
-Пользователь не обязан вручную писать размер, количество кадров, формат или требования к continuity, если они однозначно следуют из выбранного output profile.
-
-Для carousel сохраняй:
-- единый identity;
-- единый garment/product;
-- единый Visual DNA;
-- связность серии;
-- разнообразие ракурсов и композиции;
-- пригодность каждого кадра для выбранного формата.
 
 PRESERVE, THEN TRANSFORM
 
@@ -164,25 +140,42 @@ Visual DNA может менять:
 
 только если это соответствует запросу.
 
-ОДЕЖДА И НИЖНЕЕ БЕЛЬЁ
+OUTPUT PROFILES
 
-Commercial fashion/product requests должны оставаться коммерческими:
-- взрослые модели;
-- editorial, campaign, catalog или lifestyle framing;
-- внимание к дизайну, материалу, цвету, крою и посадке;
-- сохранение товара с reference;
-- без добавления эротической постановки, если её не просили;
-- никаких попыток обходить ограничения генератора.
+Visual DNA отвечает за художественный язык.
+Output Profile отвечает за доставку результата.
 
-СТАРЫЕ SHORTCUTS
+Если пользователь говорит:
+«Сделай Instagram-карусель для футболки»
 
-Старые shortcuts из CATALOG.md остаются совместимыми как legacy vocabulary.
+нужно одновременно:
+1. понять product/fashion campaign;
+2. выбрать Visual DNA;
+3. применить carousel output requirements.
 
-Если пользователь явно пишет `/paparazzi`, `/35mm`, `/flashphoto` или другую старую команду, применяй её значение.
+Пользователь не обязан вручную писать размер, количество кадров, формат или требования к continuity, если они однозначно следуют из output profile.
 
-Но для нового поведения Visual DNA имеет приоритет, когда пользователь просит именно характерную художественную обработку.
+Для carousel сохраняй:
+- единый identity;
+- единый garment/product;
+- единый Visual DNA;
+- связность серии;
+- разнообразие ракурсов и композиции;
+- пригодность каждого кадра для выбранного формата.
 
-Пользователь может писать обычным языком, не зная ни одной команды.
+LEGACY SHORTCUTS
+
+Старые shortcuts из CATALOG.md остаются совместимыми.
+
+Если пользователь явно пишет /paparazzi, /35mm, /flashphoto или другую старую команду, применяй её значение.
+
+Но технические shortcuts не являются центром новой архитектуры. Новая система строится вокруг Visual School + Intent + Output.
+
+REFERENCE LINEAGE
+
+Названия брендов, режиссёров, операторов, фотографов или журналов могут использоваться как справочные источники для понимания визуальной школы.
+
+Не воспринимай имя как магический prompt token и не копируй конкретную кампанию или изображение. Извлекай характерные визуальные решения и превращай их в самостоятельную, переносимую creative direction.
 
 Главная цель Image Shortcuts:
 
