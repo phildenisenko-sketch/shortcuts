@@ -4,13 +4,13 @@
 >
 > Опиши, что ты хочешь получить. Image Shortcuts поможет решить, **как это должно выглядеть** — через библиотеку из 20 характерных Visual Schools.
 
-![Version](https://img.shields.io/badge/version-2.0-4F46E5)
+![Version](https://img.shields.io/badge/version-2.1-4F46E5)
 ![Visual DNA](https://img.shields.io/badge/Visual%20DNA-20%20schools-FFBF00)
 ![License](https://img.shields.io/badge/License-MIT-green)
 
-## 🎨 Что изменилось
+## 🎨 Идея
 
-Современные AI-модели уже умеют делать хорошие фотографии. Поэтому Image Shortcuts больше не пытается конкурировать с ними списком длинных prompt recipes.
+Современные AI-модели уже умеют делать хорошие фотографии. Поэтому Image Shortcuts не пытается конкурировать с ними списком длинных prompt recipes.
 
 Новая идея проще:
 
@@ -24,7 +24,7 @@
 
 И получить не очередную нейтральную AI-fashion фотографию, а изображение с осознанной визуальной режиссурой.
 
-Image Shortcuts выбирает одну из 20 Visual Schools и адаптирует её под задачу.
+Image Shortcuts добавляет к любой задаче одну из 20 **Visual Schools** — переносимых визуальных языков, которые меняют пространство, постановку, свет, цвет, композицию, материалы, атмосферу и характер кадра.
 
 ## 🚀 Начните здесь
 
@@ -59,7 +59,9 @@ Image Shortcuts выбирает одну из 20 Visual Schools и адапти
 - Quiet Humanism
 - Experimental Optical
 
-Каждая школа задаёт не просто цвет или объектив, а характер пространства, света, композиции, поведения, материалов и атмосферы.
+Каждая школа задаёт не просто цвет или объектив, а **характер визуального мира**.
+
+👉 **[STYLE-SYSTEM.md](STYLE-SYSTEM.md)** — архитектура системы, правила выбора и принцип работы Visual Schools.
 
 ### 3. 🎲 Попробуйте `/surprise`
 
@@ -71,7 +73,7 @@ Image Shortcuts выбирает одну из 20 Visual Schools и адапти
 Сделай из этой фотографии необычный портрет.
 ```
 
-Image Shortcuts выберет одну из 20 Visual Schools. Если попросить ещё раз, постарается дать другую.
+Image Shortcuts выберет одну из 20 Visual Schools и адаптирует её под задачу. Если попросить ещё раз, система постарается выбрать другой визуальный язык.
 
 Не понравилось? Просто:
 
@@ -145,20 +147,18 @@ Visual DNA специально сделан **переносимым между
 
 по-прежнему можно использовать явно.
 
-Но новая архитектура не заставляет пользователя запоминать команды. Он может просто описать желаемый результат.
+Но новая архитектура не заставляет пользователя запоминать команды. Технические shortcuts теперь являются совместимым legacy-слоем, а не центром продукта.
 
-## 🧠 Новая архитектура
+## 🧠 Архитектура
 
 ```text
 USER
   ↓
-WHAT
+WHAT — intent
   ↓
-Intent Router
+HOW — Visual School
   ↓
-VISUAL DNA
-  ↓
-Output Profile
+OUTPUT — delivery profile
   ↓
 IMAGE
 ```
@@ -167,27 +167,27 @@ IMAGE
 
 Что нужно сделать:
 
-`portrait` · `fashion` · `paparazzi` · `travel` · `LinkedIn` · `product` · `cinematic` · `action` · `carousel` · etc.
+`portrait` · `fashion` · `paparazzi` · `travel` · `LinkedIn` · `product` · `cinematic` · `action` · `dating` · `avatar` · etc.
 
-### VISUAL DNA
+### HOW
 
 Как это должно выглядеть:
 
 `Surreal Minimalism` · `90s Cinema` · `Dark Luxury` · `Raw Documentary` · etc.
 
-### Output Profile
+### OUTPUT
 
 Как доставить результат:
 
-`Instagram` · `Carousel` · `LinkedIn` · `Avatar` · `Portrait` · etc.
+`Instagram` · `Carousel` · `LinkedIn` · `Avatar` · `Portrait` · `Story` · etc.
 
 ## 🎯 Главный принцип
 
 Image Shortcuts не пытается сделать prompt длиннее.
 
-Он делает изображение **намеренным**.
+Он добавляет **намерение и визуальную точку зрения**.
 
-> **Don't just tell AI what to make. Give it a point of view.**
+> **Describe what you want. Choose a visual world — or let Surprise choose one for you.**
 
 ## License
 
