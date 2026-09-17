@@ -1,143 +1,193 @@
 # ✨ Image Shortcuts
 
-> **Короткие команды для AI-картинок.**
+> **Give AI a visual point of view.**
 >
-> Один раз подключите словарь, а потом используйте короткие команды вместо длинных промптов. А если не знаете команду, просто опишите желаемый результат обычными словами - AI сам подберёт shortcut.
+> Опиши, что ты хочешь получить. Image Shortcuts поможет решить, **как это должно выглядеть** — через библиотеку из 20 характерных Visual Schools.
 
-![Version](https://img.shields.io/badge/version-1.2-4F46E5)
-![Russian-first](https://img.shields.io/badge/Russian--first-yes-FFBF00)
-![License](https://img.shields.io/badge/license-MIT-green)
+![Version](https://img.shields.io/badge/version-2.0-4F46E5)
+![Visual DNA](https://img.shields.io/badge/Visual%20DNA-20%20schools-FFBF00)
+![License](https://img.shields.io/badge/License-MIT-green)
+
+## 🎨 Что изменилось
+
+Современные AI-модели уже умеют делать хорошие фотографии. Поэтому Image Shortcuts больше не пытается конкурировать с ними списком длинных prompt recipes.
+
+Новая идея проще:
+
+> **Пользователь говорит WHAT. Image Shortcuts добавляет HOW.**
+
+Ты можешь попросить:
+
+```text
+Сделай рекламу моей футболки на модели.
+```
+
+И получить не очередную нейтральную AI-fashion фотографию, а изображение с осознанной визуальной режиссурой.
+
+Image Shortcuts выбирает одну из 20 Visual Schools и адаптирует её под задачу.
 
 ## 🚀 Начните здесь
 
 ### 1. 🧠 Подключите Image Shortcuts
 
-👉 **[PROMPT.md](PROMPT.md)** - скопируйте готовый текст и один раз вставьте его в ChatGPT, Gemini, Claude или другую нейросеть.
+👉 **[PROMPT.md](PROMPT.md)** — готовый текст, который можно один раз вставить в ChatGPT, Gemini, Claude или другую AI-систему.
 
-Внутри уже есть ссылка на GitHub-словарь, глубокие flagship-рецепты и семантический роутер.
+### 2. 🎨 Изучите Visual DNA
 
-### 2. 🎯 Попробуйте Flagship 35
+👉 **[VISUAL-DNA.md](VISUAL-DNA.md)** — библиотека из 20 визуальных школ.
 
-👉 **[FLAGSHIP-30.md](FLAGSHIP-30.md)** - первые 30 команд, где shortcut означает не просто стиль, а подробный рецепт фотографии.
+В ней есть:
 
-👉 **[FLAGSHIP-EXTRA-5.md](FLAGSHIP-EXTRA-5.md)** - ещё 5 практических рецептов: action, underwear campaign, lingerie campaign, Instagram и carousel.
+- Editorial Minimalism
+- Surreal Minimalism
+- Raw Documentary
+- 90s Cinema
+- Flash Tabloid
+- Dark Luxury
+- Maximalist Narrative
+- Cinematic Travel
+- Magazine Portrait
+- New Hollywood Intimacy
+- Urban 2000s Grit
+- Scandinavian Quiet
+- Analog Family Album
+- Hyperreal Sports Campaign
+- Neo-Futurist
+- Dreamscape
+- Pop Graphic Studio
+- Brutalist Editorial
+- Quiet Humanism
+- Experimental Optical
 
-Например, можно написать:
+Каждая школа задаёт не просто цвет или объектив, а характер пространства, света, композиции, поведения, материалов и атмосферы.
 
-```text
-/paparazzi
+### 3. 🎲 Попробуйте `/surprise`
 
-Сделай меня выходящим из ресторана в Нью-Йорке.
-```
-
-Но знать команду необязательно. Можно написать:
-
-```text
-Сделай меня выходящим из ресторана в Нью-Йорке, как будто меня неожиданно заметили папарацци.
-```
-
-AI должен сам сопоставить смысл запроса с `/paparazzi` и применить готовую режиссуру кадра: дистанцию, поведение субъекта, объектив, свет, фокус, композицию, реалистичные несовершенства и характер настоящей уличной фотографии.
-
-### 3. 🧭 Используйте смысл вместо запоминания команд
-
-👉 **[ROUTER.md](ROUTER.md)** - правила семантического сопоставления.
-
-Пользователю не нужно помнить 300 английских команд. Он может сказать:
-
-```text
-Сделай профессиональное фото для LinkedIn, но чтобы оно выглядело естественно.
-```
-
-или:
+`/surprise` — это **I'm Feeling Lucky для изображений**.
 
 ```text
-Сделай рекламную съёмку для бренда нижнего белья.
+/surprise
+
+Сделай из этой фотографии необычный портрет.
 ```
 
-или:
+Image Shortcuts выберет одну из 20 Visual Schools. Если попросить ещё раз, постарается дать другую.
+
+Не понравилось? Просто:
 
 ```text
-Сделай Instagram-карусель для бренда одежды.
+/surprise
 ```
 
-AI сам выбирает соответствующие shortcuts и комбинирует их с обычным текстом пользователя.
+Никаких промтов придумывать не нужно.
 
-### 4. 📚 Найдите остальные shortcuts
+### 4. 🧭 Посмотрите, как работает роутер
 
-👉 **[CATALOG.md](CATALOG.md)** - полный каталог команд.
+👉 **[STYLE-ROUTER.md](STYLE-ROUTER.md)** — правила автоматического выбора Visual School.
 
-## Почему shortcuts полезны
-
-Обычный prompt:
-
-```text
-Сделай фото папарацци...
-```
-
-говорит AI только **что** вы хотите получить.
-
-Хороший Image Shortcut должен дополнительно описывать **как это было снято**: камера, объектив, перспектива, свет, глубина резкости, композиция, материалы и характер изображения.
-
-Поэтому:
-
-```text
-/paparazzi
-```
-
-это не просто сокращение фразы «фото папарацци». Это название сохранённого фотографического рецепта.
-
-## Комбинируйте команды
-
-```text
-/paparazzi /35mm /flashphoto /fullbody
-
-Сделай меня выходящим из ресторана в Нью-Йорке.
-```
-
-Команды разных типов объединяются. Явные пожелания пользователя всегда имеют приоритет.
-
-## 👕 Для брендов одежды и белья
-
-Image Shortcuts можно использовать для коммерческой съёмки:
-
-- на взрослых моделях;
-- на улице;
-- в интерьере;
-- в магазине;
-- на вешалке или рейле;
-- на полке;
-- для каталога;
-- для интернет-магазина;
-- для lookbook;
-- для рекламной кампании.
-
-👉 **[Одежда и товары](categories/08-clothing.md)**
-
-## 🧩 Можно создавать свои команды
+Пользователь может вообще не знать названий стилей.
 
 Например:
 
 ```text
-/mybrooklyn
+Сделай меня для LinkedIn.
 ```
 
-Вы сами решаете, что означает ваша команда.
+система сама определит задачу как professional portrait и выберет подходящую визуальную школу.
 
-## 📚 Что внутри
+Или:
 
-- **307 команд**
-- **36 категорий**
-- **35 flagship shortcuts с глубокими фотографическими рецептами**
-- семантическое сопоставление обычного языка с shortcuts
-- простой каталог на русском
-- готовый prompt для настройки AI
-- живой GitHub-словарь
-- поддержка комбинаций и параметров
-- возможность создавать свои команды
+```text
+Сделай рекламу нижнего белья.
+```
 
-## 🤝 Хотите добавить команду?
+Visual DNA адаптируется под commercial fashion.
 
-Смотрите [CONTRIBUTING.md](CONTRIBUTING.md).
+## 📸 Где это работает
+
+Visual DNA специально сделан **переносимым между задачами**.
+
+Одну и ту же визуальную школу можно применять к:
+
+- твоим фотографиям;
+- fashion и clothing campaigns;
+- product photography;
+- travel photos;
+- paparazzi;
+- LinkedIn;
+- professional portraits;
+- dating profiles;
+- avatars;
+- websites;
+- social media;
+- cinematic scenes;
+- cars;
+- sports;
+- food;
+- architecture;
+- family и lifestyle photography.
+
+То есть Visual DNA — это не категория фотографии. Это **визуальный характер**.
+
+## 🧩 Старые shortcuts остаются
+
+Старый каталог из 300+ команд остаётся совместимым.
+
+👉 **[CATALOG.md](CATALOG.md)** — legacy vocabulary.
+
+Например:
+
+```text
+/paparazzi
+/35mm
+/flashphoto
+```
+
+по-прежнему можно использовать явно.
+
+Но новая архитектура не заставляет пользователя запоминать команды. Он может просто описать желаемый результат.
+
+## 🧠 Новая архитектура
+
+```text
+USER
+  ↓
+WHAT
+  ↓
+Intent Router
+  ↓
+VISUAL DNA
+  ↓
+Output Profile
+  ↓
+IMAGE
+```
+
+### WHAT
+
+Что нужно сделать:
+
+`portrait` · `fashion` · `paparazzi` · `travel` · `LinkedIn` · `product` · `cinematic` · `action` · `carousel` · etc.
+
+### VISUAL DNA
+
+Как это должно выглядеть:
+
+`Surreal Minimalism` · `90s Cinema` · `Dark Luxury` · `Raw Documentary` · etc.
+
+### Output Profile
+
+Как доставить результат:
+
+`Instagram` · `Carousel` · `LinkedIn` · `Avatar` · `Portrait` · etc.
+
+## 🎯 Главный принцип
+
+Image Shortcuts не пытается сделать prompt длиннее.
+
+Он делает изображение **намеренным**.
+
+> **Don't just tell AI what to make. Give it a point of view.**
 
 ## License
 
