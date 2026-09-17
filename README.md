@@ -63,6 +63,8 @@ Image Shortcuts добавляет к любой задаче одну из 20 *
 
 👉 **[STYLE-SYSTEM.md](STYLE-SYSTEM.md)** — архитектура системы, правила выбора и принцип работы Visual Schools.
 
+👉 **[STYLE-REFERENCES.md](STYLE-REFERENCES.md)** — бренды, журналы, кино- и фотографические традиции, которые использовались как reference lineage при создании школ.
+
 ### 3. 🎲 Попробуйте `/surprise`
 
 `/surprise` — это **I'm Feeling Lucky для изображений**.
